@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+        <center><h1>SEARCH</h1></center>
+        {% if query %}
+            <center>
+                
+                {% for k,v in q_dict.items %}
+                    <p>{{k}} {{v}}</p>
+                {% endfor %}
+            </center>
+            <br>
+            <div style = "position:relative; left:80px">
+            {% for r in recipe_list %}
+                <h3> {{r}} </h3><br>
+            {% endfor %}
+            </div>
+        {% else %}
+            <h2> NO INPUT</h2><br>
+        {% endif %}
+    
+{% endblock %}

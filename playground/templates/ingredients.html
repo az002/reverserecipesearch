@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <center>
+        <h1>Ingredients</h1>
+        {% for ingredient in ingredients %}
+            {{ ingredient }} <br>
+        {% endfor %}
+    </center>
+    
+{% endblock %}
